@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container" style="margin-top:75px">
+    <h4>REGISTER</h4>
+    <form method="POST" class="p-3 shadow">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" class="form-control" name="username" placeholder="Enter Your User Name">
+        </div><br>
+        <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Enter Your Password">
+        </div><br>
+        <div class="form-group">
+            <input type="password" class="form-control" name="password1" placeholder="Confirm Your Password">
+        </div><br>
+        <input type="submit" class="btn btn-success">
+    </form>
+    {% for msg in messages %}
+    <small class="alert alert-warning">{{msg}}</small>
+    {% endfor %}
+</div>
+{% endblock %}

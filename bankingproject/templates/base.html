@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="{% static 'custom.css' %}">
+</head>
+<body class="my_qai">
+{% include 'banner.html'%}
+{% block content %}
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e6e2d3;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}"><b>Login</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}"><b>Register</b></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                            <b>Branches</b>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ernakulam">Ernakulam</a>
+                            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thrissur">Thrissur</a>
+                            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kozhikode">Kozhikode</a>
+                            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Malappuram_district">Malapuram</a>
+                            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thiruvananthapuram">Trivandrum</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my_class">
+        <div class="container">
+            <p class="text-justify">Are you looking for a hassle-free and user-friendly banking experience? Look no further!
+                Welcome to EasyBank, where simplicity meets convenience. Our mission is to make banking easy for everyone,
+                whether you're a seasoned pro or just starting out on your financial journey.Experience the future of
+                banking with EasyBank. Say goodbye to complicated procedures and hello to straightforward banking that puts
+                you in control. Join us today</p>
+        </div>
+        <div class="container">
+            <div style="text-align:center ; margin-top:75px" >
+                <a class="btn btn-primary" href="{% url 'login' %}">LOGIN HERE</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>
